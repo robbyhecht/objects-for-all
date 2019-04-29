@@ -38,6 +38,27 @@ document.querySelector("#btn-saveCategory").addEventListener("click", event => {
 
 });
 
+document.querySelector("#btn-saveItem").addEventListener("click", event => {
+  const item = document.querySelector(".junk_item_name").value;
+  const categoryItem = document.querySelector(".junk_item_category").value;
+
+
+      // Once you have collected all the values, build your data structure
+      const itemObj = {
+          name: item,
+          categoryId: categoryItem
+      };
+
+  API.saveItem(itemObj)
+  // .then(parsedResult => {
+  //     console.log("what is the result", parsedResult);
+  // });
+
+});
+
+
+
+
 
 document.querySelector("#btn-getJunk").addEventListener("click", handleGetJunkClick);
 document.querySelector("#btn-getCategories").addEventListener("click", handleGetCategoryClick);

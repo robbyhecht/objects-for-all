@@ -22,9 +22,21 @@
 
     <button class="btn category__save" id="btn-saveCategory">Save Junk Category</button>
 
+    <h2>More Junk Items</h2>
+    <fieldset>
+        <label for="junk_item_name">Name:</label>
+        <input id="junk_item_name" class="junk_item_name" type="text" autofocus />
+        <label for="junk_item_category">Category:</label>
+        <select id="junk_item_category" class="junk_item_category">
+        </select>
+    </fieldset>
+
+
+    <button class="btn item__save" id="btn-saveItem">Save Junk Item</button>
+
+    <script src="scripts/dbcalls.js"></script>
     <script src="scripts/dom-category.js"></script>
     <script src="scripts/dom-junk.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/dbcalls.js"></script>
 </body>
 </html>

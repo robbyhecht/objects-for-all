@@ -5,6 +5,20 @@ const junkDom = (obj) => {
             </div>`;
 };
 
+const listCategory = () => {
+  let categoryName = document.querySelector("#junk_item_category")
+  categoryName.innerHTML = ""
+  API.getCategories().then(categories => {
+    categories.forEach(category => {
+      console.log(category)
+      let categoryHTML = `<option value="${category.id}">${category.name}</option>`
+      categoryName.innerHTML += categoryHTML
+    })
+  })
+  console.log(categoryName)
+};
+listCategory()
+
 
 function buildJunkDom(dataArray) {
     mainContainer.innerHTML = "";
